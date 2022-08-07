@@ -1,0 +1,26 @@
+[2022-08-07 15:50:27,751] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_file_present manual__2022-08-07T15:50:26.591364+00:00 [queued]>
+[2022-08-07 15:50:27,759] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_file_present manual__2022-08-07T15:50:26.591364+00:00 [queued]>
+[2022-08-07 15:50:27,759] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 15:50:27,760] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-07 15:50:27,760] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 15:50:27,775] {taskinstance.py:1377} INFO - Executing <Task(FileSensor): is_file_present> on 2022-08-07 15:50:26.591364+00:00
+[2022-08-07 15:50:27,779] {standard_task_runner.py:52} INFO - Started process 1549 to run task
+[2022-08-07 15:50:27,782] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'is_file_present', 'manual__2022-08-07T15:50:26.591364+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmp3g6akyxn', '--error-file', '/tmp/tmpk3tr2zfj']
+[2022-08-07 15:50:27,783] {standard_task_runner.py:80} INFO - Job 8: Subtask is_file_present
+[2022-08-07 15:50:27,832] {task_command.py:369} INFO - Running <TaskInstance: student_dag.is_file_present manual__2022-08-07T15:50:26.591364+00:00 [running]> on host 4b002c17c6af
+[2022-08-07 15:50:27,894] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=is_file_present
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T15:50:26.591364+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-07T15:50:26.591364+00:00
+[2022-08-07 15:50:27,902] {base.py:68} INFO - Using connection ID 'student_file_conn' for task execution.
+[2022-08-07 15:50:27,902] {filesystem.py:58} INFO - Poking for file /opt/***/datasets/Students_data.csv
+[2022-08-07 15:50:27,904] {filesystem.py:63} INFO - Found File /opt/***/datasets/Students_data.csv last modified: 20220719222414
+[2022-08-07 15:50:27,904] {base.py:301} INFO - Success criteria met. Exiting.
+[2022-08-07 15:50:27,913] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=is_file_present, execution_date=20220807T155026, start_date=20220807T155027, end_date=20220807T155027
+[2022-08-07 15:50:27,954] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-07 15:50:27,996] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

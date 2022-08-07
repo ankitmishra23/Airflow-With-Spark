@@ -1,0 +1,30 @@
+[2022-08-07 14:31:12,894] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.load_to_postgres manual__2022-08-07T14:31:08.215906+00:00 [queued]>
+[2022-08-07 14:31:12,903] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.load_to_postgres manual__2022-08-07T14:31:08.215906+00:00 [queued]>
+[2022-08-07 14:31:12,904] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 14:31:12,904] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-07 14:31:12,904] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 14:31:12,919] {taskinstance.py:1377} INFO - Executing <Task(customPostgresOperator): load_to_postgres> on 2022-08-07 14:31:08.215906+00:00
+[2022-08-07 14:31:12,925] {standard_task_runner.py:52} INFO - Started process 2328 to run task
+[2022-08-07 14:31:12,928] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'load_to_postgres', 'manual__2022-08-07T14:31:08.215906+00:00', '--job-id', '8', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmp4gnmdbgm', '--error-file', '/tmp/tmpwbo8e5uh']
+[2022-08-07 14:31:12,929] {standard_task_runner.py:80} INFO - Job 8: Subtask load_to_postgres
+[2022-08-07 14:31:12,978] {task_command.py:369} INFO - Running <TaskInstance: student_dag.load_to_postgres manual__2022-08-07T14:31:08.215906+00:00 [running]> on host 5cab04260180
+[2022-08-07 14:31:13,054] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=load_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T14:31:08.215906+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-07T14:31:08.215906+00:00
+[2022-08-07 14:31:13,055] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/plugins/Operators/postgresCustomOperator.py", line 15, in execute
+    conn=customPostgresHook.get_custom_connection(self.conn_id)
+  File "/opt/airflow/plugins/Hooks/postgresCustomHook.py", line 13, in get_custom_connection
+    db=create_engine(self.get_connection_uri(self.conn_id))
+AttributeError: 'str' object has no attribute 'get_connection_uri'
+[2022-08-07 14:31:13,071] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=student_dag, task_id=load_to_postgres, execution_date=20220807T143108, start_date=20220807T143112, end_date=20220807T143113
+[2022-08-07 14:31:13,083] {standard_task_runner.py:97} ERROR - Failed to execute job 8 for task load_to_postgres ('str' object has no attribute 'get_connection_uri'; 2328)
+[2022-08-07 14:31:13,100] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-07 14:31:13,132] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

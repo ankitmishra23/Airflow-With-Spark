@@ -1,0 +1,28 @@
+[2022-08-07 17:55:07,706] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T17:55:01.823223+00:00 [queued]>
+[2022-08-07 17:55:07,715] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T17:55:01.823223+00:00 [queued]>
+[2022-08-07 17:55:07,715] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 17:55:07,715] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-07 17:55:07,715] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 17:55:07,732] {taskinstance.py:1377} INFO - Executing <Task(customPostgresSensor): is_table_loaded> on 2022-08-07 17:55:01.823223+00:00
+[2022-08-07 17:55:07,769] {standard_task_runner.py:52} INFO - Started process 7642 to run task
+[2022-08-07 17:55:07,774] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'is_table_loaded', 'manual__2022-08-07T17:55:01.823223+00:00', '--job-id', '14', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmpkfqtxvqt', '--error-file', '/tmp/tmpjn7r1zfs']
+[2022-08-07 17:55:07,775] {standard_task_runner.py:80} INFO - Job 14: Subtask is_table_loaded
+[2022-08-07 17:55:07,846] {task_command.py:369} INFO - Running <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T17:55:01.823223+00:00 [running]> on host c057bdbe1645
+[2022-08-07 17:55:07,910] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=is_table_loaded
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T17:55:01.823223+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-07T17:55:01.823223+00:00
+[2022-08-07 17:55:07,911] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 277, in execute
+    poke_return = self.poke(context)
+TypeError: poke() takes 1 positional argument but 2 were given
+[2022-08-07 17:55:07,919] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=student_dag, task_id=is_table_loaded, execution_date=20220807T175501, start_date=20220807T175507, end_date=20220807T175507
+[2022-08-07 17:55:07,928] {standard_task_runner.py:97} ERROR - Failed to execute job 14 for task is_table_loaded (poke() takes 1 positional argument but 2 were given; 7642)
+[2022-08-07 17:55:07,946] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-08-07 17:55:07,973] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

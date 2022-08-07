@@ -1,0 +1,24 @@
+[2022-08-07 18:07:00,355] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T18:06:56.205478+00:00 [queued]>
+[2022-08-07 18:07:00,365] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T18:06:56.205478+00:00 [queued]>
+[2022-08-07 18:07:00,365] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 18:07:00,365] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-07 18:07:00,366] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 18:07:00,383] {taskinstance.py:1377} INFO - Executing <Task(customPostgresSensor): is_table_loaded> on 2022-08-07 18:06:56.205478+00:00
+[2022-08-07 18:07:00,389] {standard_task_runner.py:52} INFO - Started process 8216 to run task
+[2022-08-07 18:07:00,393] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'is_table_loaded', 'manual__2022-08-07T18:06:56.205478+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmp5otuty23', '--error-file', '/tmp/tmpm_lkpnj5']
+[2022-08-07 18:07:00,394] {standard_task_runner.py:80} INFO - Job 22: Subtask is_table_loaded
+[2022-08-07 18:07:00,445] {task_command.py:369} INFO - Running <TaskInstance: student_dag.is_table_loaded manual__2022-08-07T18:06:56.205478+00:00 [running]> on host 91b6e29a11f0
+[2022-08-07 18:07:00,516] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=is_table_loaded
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T18:06:56.205478+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-07T18:06:56.205478+00:00
+[2022-08-07 18:07:00,527] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2022-08-07 18:07:00,531] {base.py:301} INFO - Success criteria met. Exiting.
+[2022-08-07 18:07:00,544] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=is_table_loaded, execution_date=20220807T180656, start_date=20220807T180700, end_date=20220807T180700
+[2022-08-07 18:07:00,565] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-07 18:07:00,598] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

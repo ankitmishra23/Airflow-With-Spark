@@ -1,0 +1,24 @@
+[2022-08-07 18:37:14,715] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.is_table_loaded manual__2022-08-07T18:37:09.660754+00:00 [queued]>
+[2022-08-07 18:37:14,722] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.is_table_loaded manual__2022-08-07T18:37:09.660754+00:00 [queued]>
+[2022-08-07 18:37:14,723] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 18:37:14,723] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-07 18:37:14,723] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-07 18:37:14,738] {taskinstance.py:1377} INFO - Executing <Task(customPostgresSensor): postgres_tasks.is_table_loaded> on 2022-08-07 18:37:09.660754+00:00
+[2022-08-07 18:37:14,743] {standard_task_runner.py:52} INFO - Started process 9672 to run task
+[2022-08-07 18:37:14,745] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'postgres_tasks.is_table_loaded', 'manual__2022-08-07T18:37:09.660754+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmpueglf2la', '--error-file', '/tmp/tmppiixvp6m']
+[2022-08-07 18:37:14,746] {standard_task_runner.py:80} INFO - Job 40: Subtask postgres_tasks.is_table_loaded
+[2022-08-07 18:37:14,801] {task_command.py:369} INFO - Running <TaskInstance: student_dag.postgres_tasks.is_table_loaded manual__2022-08-07T18:37:09.660754+00:00 [running]> on host 91b6e29a11f0
+[2022-08-07 18:37:14,864] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=postgres_tasks.is_table_loaded
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T18:37:09.660754+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-07T18:37:09.660754+00:00
+[2022-08-07 18:37:14,872] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2022-08-07 18:37:14,887] {base.py:301} INFO - Success criteria met. Exiting.
+[2022-08-07 18:37:14,898] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=postgres_tasks.is_table_loaded, execution_date=20220807T183709, start_date=20220807T183714, end_date=20220807T183714
+[2022-08-07 18:37:14,919] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-07 18:37:14,960] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
