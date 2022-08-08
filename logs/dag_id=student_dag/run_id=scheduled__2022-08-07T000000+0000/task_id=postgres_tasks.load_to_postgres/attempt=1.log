@@ -1,0 +1,52 @@
+[2022-08-08 14:53:43,456] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [queued]>
+[2022-08-08 14:53:43,470] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [queued]>
+[2022-08-08 14:53:43,470] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 14:53:43,470] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-08 14:53:43,471] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 14:53:43,517] {taskinstance.py:1377} INFO - Executing <Task(customPostgresOperator): postgres_tasks.load_to_postgres> on 2022-08-07 00:00:00+00:00
+[2022-08-08 14:53:43,521] {standard_task_runner.py:52} INFO - Started process 86 to run task
+[2022-08-08 14:53:43,542] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'postgres_tasks.load_to_postgres', 'scheduled__2022-08-07T00:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmp_myd7vcd', '--error-file', '/tmp/tmpbwn6apnz']
+[2022-08-08 14:53:43,543] {standard_task_runner.py:80} INFO - Job 45: Subtask postgres_tasks.load_to_postgres
+[2022-08-08 14:53:43,638] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:470: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2022-08-08 14:53:43,734] {task_command.py:369} INFO - Running <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [running]> on host 4b002c17c6af
+[2022-08-08 14:53:43,856] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=postgres_tasks.load_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-07T00:00:00+00:00
+[2022-08-08 14:53:43,876] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2022-08-08 14:53:45,995] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=postgres_tasks.load_to_postgres, execution_date=20220807T000000, start_date=20220808T145343, end_date=20220808T145345
+[2022-08-08 14:53:46,027] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-08 14:53:46,125] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-08-08 20:30:53,501] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [queued]>
+[2022-08-08 20:30:53,511] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [queued]>
+[2022-08-08 20:30:53,511] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 20:30:53,512] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-08 20:30:53,512] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 20:30:53,525] {taskinstance.py:1377} INFO - Executing <Task(customPostgresOperator): postgres_tasks.load_to_postgres> on 2022-08-07 00:00:00+00:00
+[2022-08-08 20:30:53,529] {standard_task_runner.py:52} INFO - Started process 289 to run task
+[2022-08-08 20:30:53,532] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'postgres_tasks.load_to_postgres', 'scheduled__2022-08-07T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmpfpi71v6h', '--error-file', '/tmp/tmp8fmhv__x']
+[2022-08-08 20:30:53,625] {standard_task_runner.py:80} INFO - Job 4: Subtask postgres_tasks.load_to_postgres
+[2022-08-08 20:30:53,638] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:470: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2022-08-08 20:30:53,672] {task_command.py:369} INFO - Running <TaskInstance: student_dag.postgres_tasks.load_to_postgres scheduled__2022-08-07T00:00:00+00:00 [running]> on host 2e5d436b08ef
+[2022-08-08 20:30:53,734] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=postgres_tasks.load_to_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-07T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-08-07T00:00:00+00:00
+[2022-08-08 20:30:53,820] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2022-08-08 20:30:53,904] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=postgres_tasks.load_to_postgres, execution_date=20220807T000000, start_date=20220808T203053, end_date=20220808T203053
+[2022-08-08 20:30:53,946] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-08 20:30:53,995] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

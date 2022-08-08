@@ -1,0 +1,44 @@
+[2022-08-08 20:47:54,113] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.create_postgres_table manual__2022-08-08T20:46:51.921258+00:00 [queued]>
+[2022-08-08 20:47:54,124] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: student_dag.postgres_tasks.create_postgres_table manual__2022-08-08T20:46:51.921258+00:00 [queued]>
+[2022-08-08 20:47:54,125] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 20:47:54,125] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-08-08 20:47:54,127] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-08 20:47:54,145] {taskinstance.py:1377} INFO - Executing <Task(PostgresOperator): postgres_tasks.create_postgres_table> on 2022-08-08 20:46:51.921258+00:00
+[2022-08-08 20:47:54,150] {standard_task_runner.py:52} INFO - Started process 956 to run task
+[2022-08-08 20:47:54,153] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'student_dag', 'postgres_tasks.create_postgres_table', 'manual__2022-08-08T20:46:51.921258+00:00', '--job-id', '20', '--raw', '--subdir', 'DAGS_FOLDER/students_dag.py', '--cfg-path', '/tmp/tmppwik1een', '--error-file', '/tmp/tmprwoqv_e9']
+[2022-08-08 20:47:54,155] {standard_task_runner.py:80} INFO - Job 20: Subtask postgres_tasks.create_postgres_table
+[2022-08-08 20:47:54,224] {task_command.py:369} INFO - Running <TaskInstance: student_dag.postgres_tasks.create_postgres_table manual__2022-08-08T20:46:51.921258+00:00 [running]> on host 67df3b1ed5c8
+[2022-08-08 20:47:54,309] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=ankit
+AIRFLOW_CTX_DAG_ID=student_dag
+AIRFLOW_CTX_TASK_ID=postgres_tasks.create_postgres_table
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-08T20:46:51.921258+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-08T20:46:51.921258+00:00
+[2022-08-08 20:47:54,317] {base.py:68} INFO - Using connection ID 'postgres_conn' for task execution.
+[2022-08-08 20:47:54,320] {dbapi.py:208} INFO - Running statement: Create table if not exists students(
+    ID integer not null,
+    class varchar(10) null,
+    gender varchar(10) null,
+    race integer null,
+    GPA decimal(5,2) null,
+    Algebra integer null,
+    Calculus1 integer null,
+    Calculus2 integer null,
+    Statistics integer null,
+    Probability integer null,
+    Measure integer null,
+    Functional_analysis integer null,
+    from1 varchar(10) null,
+    from2 varchar(10) null,
+    from3 varchar(10) null,
+    from4 integer null,
+    y integer null
+), parameters: None
+[2022-08-08 20:47:54,321] {postgres.py:94} INFO - NOTICE:  relation "students" already exists, skipping
+
+[2022-08-08 20:47:54,333] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=student_dag, task_id=postgres_tasks.create_postgres_table, execution_date=20220808T204651, start_date=20220808T204754, end_date=20220808T204754
+[2022-08-08 20:47:54,365] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-08 20:47:54,404] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check
